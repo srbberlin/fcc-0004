@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - fcc-0004 The Weather Report</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js'></script>-->
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="jumbotron d-flex align-items-center">
+  <div id="cont" class="container" ng-app="app" ng-cloak>
+    <div id="top" ng-controller="ctrl">
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-4">
+          <img ng-src="{{icon}}">
+        </div>
+        <div  class="col"></div>
+      </div>
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3">Here&nbsp;:</div>
+        <div class="col-sm-4">
+          Latitude: <span ng-bind="latitude | number : 2"></span>,<br class="hideit"> 
+          Longitude: <span ng-bind="longitude | number : 2"></span>
+        </div>
+        <div  class="col"></div>
+      </div>
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-4">
+          <span ng-bind="country"></span>,
+          <span ng-bind="region"></span>,
+          <span ng-bind="name"></span><br>&nbsp;
+        </div>
+        <div  class="col"></div>
+      </div>
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3">Temprature&nbsp;:</div>
+        <div class="col-sm-4">
+          <span ng-bind="temp_val"></span>
+          <span ng-bind-html="temp_unit"></span>
+        </div>
+        <div  class="col"></div>
+      </div>
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3">Pressure :</div>
+        <div class="col-sm-4">
+          <span ng-bind="pressure_val"></span>
+          <span ng-bind-html="pressure_unit"></span>
+        </div>
+        <div  class="col"></div>
+      </div>
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3">Humidity :</div>
+        <div class="col-sm-4">
+          <span ng-bind="humidity"></span> %<br>&nbsp
+        </div>
+        <div  class="col"></div>
+      </div>
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3">Wind direction :</div>
+        <div class="col-sm-4">
+          <span ng-bind="wind_dir"></span>
+        </div>
+        <div  class="col"></div>
+      </div>
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3">Speed :</div>
+        <div class="col-sm-4">
+          <span ng-bind="wind_val"></span>&nbsp;
+          <span ng-bind-html="wind_unit"></span><br>&nbsp;
+        </div>
+        <div  class="col"></div>
+      </div>
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3">Reload :</div>
+        <div class="col-sm-4">
+          <button ng-click="reload()">Weather</button>
+        </div>
+        <div  class="col"></div>
+      </div>
+      <div class="row">
+        <div  class="col"></div>
+        <div class="col-sm-3">Toggle to :</div>
+        <div class="col-sm-4">
+          <button ng-click="toggleUnits()" ng-bind="units"></button>
+          <br><br><br>
+        </div>
+        <div  class="col"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-sanitize.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
